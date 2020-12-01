@@ -1,0 +1,45 @@
+:root {
+  --hover-bg-light: rgba(255, 0, 0, .2);
+  --hover-bg-dark: rgba(255, 0, 0, 1);
+  --hover-rotate-full: 360deg;
+  --hover-scale-lrg: 1.5;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  height: 6rem;
+  width: 6rem;
+  font-size: 2rem;
+  background-color: var(--hover-bg-light);
+  border-radius: 50%;
+  transition: all 2s cubic-bezier(.08,.84,.56,-0.84) 1s;
+}
+
+.hover-btn:hover {
+  background-color: var(--hover-bg-dark);
+  transform: scale(var(--hover-scale-lrg)) 
+            rotate(var(--hover-rotate-full));
+}
